@@ -1,0 +1,470 @@
+body {
+    background-color: lightgray;
+    color: #404040;
+    font-family: sans-serif;
+    margin: auto;
+    max-width: 1280px;
+    width: 75%;
+}
+
+h1, h2 {
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+h1 { 
+    margin: 30px 0 10px; /* Collapsing top/bottom margins for headings */
+}
+
+h2 {
+    margin: 30px 0 30px;
+}
+
+h3 {
+    font-size: .75vw;
+    font-style: italic;
+    margin: 0 0 20px; 
+}
+
+h4 {
+    letter-spacing: .1em;
+    margin: 20px 0 10px;
+    text-transform: uppercase;
+} 
+
+p {
+    font-size: 1.1rem;
+}
+
+.card {
+    background-color: white;
+    box-shadow: 5px 10px 5px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 0 75px; /* Margin on bottom only to prevent collapsing margins between cards. */
+    padding: 30px 40px;
+    text-align: center;
+}
+
+.card--intro {
+    background-image: url(/images/background.png), linear-gradient(to right bottom,#fff 20%,#ec6909) !important;
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    border-bottom: 50px solid white; /* Undoes .card padding and keeps distance between the "dip" of the background image graphic from the bottom of the card. */
+    margin-top: 75px;
+    padding-bottom: 0px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    margin: 10px auto 10px; /* Overrides body 0 margin top/bottom whilst maintaining center alignment. */
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.marker-icon {
+    color: #ec6909;
+    padding: 0px 8px;
+}
+
+.horizontal-list {
+    list-style: none;
+    margin: 10px;
+    padding-left: 0;
+}
+
+.horizontal-list li {
+    box-sizing: content-box; /* Ensures that left/right padding does not eat into list item's dimensions. */
+    display: inline-block;
+    padding: 0 10px;
+}
+
+.contact-icons li { /* Keeps list items square regardless of different dimensions between bold and solid FA icons */
+    height: 1vw; 
+    width: 1vw;
+}
+
+.contact-icons i { 
+    background-color: #404040;
+    border-radius: 10%;
+    color: white;
+    font-size: 0.5vw;
+    height: 100%; /* Keeps FA icons centered and strechted to square list item dimensions. */
+    padding: 20%;
+    transition: transform 0.5s;
+    width: 100%;
+
+}
+
+.paragraph-lineheight {
+    line-height: 2;
+}
+
+.fa-heart {
+    color: red;
+}
+
+.button {
+    background-color: #ec6909;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.75pt;
+    margin: 20px;
+    padding: 15px 20px 15px;
+    transition: transform .5s;
+}
+
+.button:hover, .contact-icons i:hover {
+    transform: scale(1.1);
+}
+
+.button:hover {
+    font-weight: 500;
+}
+
+/* .button:hover::after {
+    content: " \f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}  */
+
+.skills i {
+    color: #ec6909;
+    font-size: 2.5em;
+}
+
+.skills div {
+    padding: 30px 0 30px;
+}
+
+.testimonial {
+    height: 500px; /* Prevents carousel height changing with variable carousel-item content */
+    margin: 0 auto;
+    padding: 30px 0 20px;
+    width: 75%;
+}
+
+.testimonial p {
+    padding-top: 30px;
+}
+
+.arrow-icon {
+   color: #404040;
+   font-size: 1.5rem;
+}
+
+.carousel-indicators li {
+    background-color: #a0a0a0;
+}
+
+.carousel-indicators .active {
+    background-color: #404040;
+}
+
+.carousel-control-prev {
+    left: -30px;
+}
+
+.carousel-control-next {
+    right: -30px;
+}
+
+
+
+.contact { /* Puts cta and form side-by-side */
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta, .form {
+    width: 45%; 
+}
+
+.cta-div, .contact-div {
+    border: solid 1px;
+    display: grid;
+    height: 480px; /* Maintains equal height of both bordered divs regardless of their content. */
+    padding: 20px;
+    text-align: left;
+}
+
+.cta-div {
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.contact-div {
+    grid-template-rows: repeat(3, 1fr) 2fr 1fr;
+}
+
+.cta-div div:last-child {
+    align-self: end;
+    margin-bottom: 0;
+}
+
+.contact-div div:last-child {
+    align-self: end;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.cta-div h2 {
+    font-size: 1.5vw;
+}
+
+.contact h2 {
+    margin-top: 0; /* Removes top margin from both headings in the contact div */
+}
+
+.icons-div i{
+    font-size: 2.5vw;
+}
+
+.icons-div img {
+    width: 3vw;
+}   
+
+.icons-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.icons-div span:first-child {
+    padding-left: 0;
+}
+
+.icons-div span:last-child {
+    padding-right: 0;
+}
+
+.icons-div span {
+    padding: 25px 15px 0px;
+}
+
+.form-row-div {
+    margin-bottom: 25px;
+}
+
+.form-row-div:first-child {
+    margin-bottom: 0;
+}
+
+input, textarea {
+    width: 100%;
+    background-color: #eeeeee;
+    padding: 15px;
+    border: none;
+}
+
+::placeholder {
+    color: #404040;
+}
+
+textarea {
+    max-height: 3vw;
+    resize: vertical;
+}
+
+.submit-button {
+    margin: 0px 0px 0px 20px; /* Undoes right margin from .button */
+}
+
+/* MEDIA QUERIES BELOW */
+
+@media (max-width: 2800px) {
+    h1, h2 {
+        font-size: 1.5vw; /* Up from 1 */
+    }
+
+    .cta h2 {
+        font-size: 1.75vw; /* Up from 1.5 */
+    }
+
+    .contact-icons i {
+        font-size: 0.75vw; /* Up from 0.5 */
+    }
+
+    .contact-icons li {
+        height: 1.5vw; /* Up from 1 */
+        width: 1.5vw;
+    }
+
+    h3 {
+        font-size: 1vw; /* Up from 0.75 */
+    }
+
+    .icons-div i{
+        font-size: 3.5vw; /* Up from 2.5 */
+    }
+    
+    .icons-div img {
+        width: 4vw; /* Up from 3 */
+    }
+
+    textarea {
+        max-height: 4.5vw; /* Up from 3 */
+    }
+}
+
+@media (max-width: 1600px) {
+    h1, h2 {
+        font-size: 2vw; /* Up from 1.5 */
+    }
+
+    .cta h2 {
+        font-size: 3vw; /* Up from 2.25 */
+    }
+
+    .contact-icons i {
+        font-size: 1vw; /* Up from 0.75 */
+    }
+
+    .contact-icons li {
+        height: 2vw; /* Up from 1.5 */
+        width: 2vw;
+    }
+
+    h3 {
+        font-size: 1.25vw; /* Up from 1 */
+    }
+
+    .icons-div i {
+        font-size: 4.5vw; /* Up from 3.5 */
+    }
+
+    .icons-div img {
+        width: 5vw; /* Up from 3 */
+    }
+
+    textarea {
+        max-height: 6vw; /* Up from 4.5 */
+    }
+}
+
+@media (max-width: 1200px) {
+    .contact {
+        display: block;
+    }
+
+    .cta, .form {
+        width: 100%; 
+    }
+
+    .cta-div {
+        height: 400px;
+    }
+
+    .contact-icons i {
+        font-size: 1.5vw; /* Up from 1 */
+    }
+
+    .contact-icons li {
+        height: 3vw; /* Up from 2 */
+        width: 3vw;
+    }
+
+    h1, h2 {
+        font-size: 3vw; /* Up from 2 */
+    }
+
+    .cta h2 {
+        font-size: 4vw; /* Up from 3 */
+    }
+
+    h3 {
+        font-size: 2vw; /* Up from 1.25 */
+    }
+
+    .icons-div i {
+        font-size: 9vw; /* Up from 4.5 */
+    }
+
+    .icons-div img {
+        width: 10vw; /* Up from 5 */
+    }
+
+    textarea {
+        max-height: 12vw; /* Up from 6 */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-icons i {
+        font-size: 2.5vw; /* Up from 1.5 */
+    }
+
+    .contact-icons li {
+        height: 5vw; /* Up from 3 */
+        width: 5vw;
+    }
+
+    h1, h2 {
+        font-size: 4vw; /* Up from 3 */
+    }
+
+    .cta h2 {
+        font-size: 5vw; /* Up from 4 */
+    }
+
+    h3 {
+        font-size: 3vw; /* Up from 2 */
+    }
+
+    .icons-div i {
+        font-size: 10vw; /* Up from 9 */
+    }
+
+    .icons-div img {
+        width: 11vw; /* Up from 10 */
+    }
+
+    .testimonial {
+        height: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-icons i {
+        font-size: 3.5vw; /* Up from 2.5 */
+    }
+
+    .contact-icons li {
+        height: 7vw; /* Up from 5 */
+        width: 7vw;
+    }
+
+    h1, h2 {
+        font-size: 5vw; /* Up from 4 */
+    }
+
+    .cta h2 {
+        font-size: 6vw; /* Up from 5 */
+    }
+
+    h3 {
+        font-size: 4vw; /* Up from 3 */
+    }
+
+    .icons-div i {
+        font-size: 9vw; /* Down from 10 */
+    }
+
+    .icons-div img {
+        width: 10vw; /* Down from 11 */
+    }
+
+    .testimonial {
+        height: 750px;
+    }
+
+    .cta-div {
+        height: 480px;
+    }
+
+    textarea {
+        max-height: 24vw; /* Up from 12 */
+    }
+}
